@@ -5,7 +5,7 @@ This repository accompanies the paper:
 **Uncertainty Visualization for Approximated Barycenter of Contour Trees Based on Partial Optimal Transport**  
 Mingzhe Li, Fangfei Lan, Gunther Weber, Bei Wang
 
-It implements a pipeline that (1) computes an approximated barycenter of a family of contour trees using partial fused Gromov–Wasserstein (FGW) transport, and (2) visualizes structural and functional uncertainty in an interactive metro-map view.
+It implements a pipeline that (1) computes an approximated barycenter of a family of contour trees using fused partial Gromov-Wasserstein (FGW) metric, and (2) visualizes structural and functional uncertainty in an interactive metro-map view.
 
 ## Pipeline overview
 
@@ -60,8 +60,7 @@ python prepare_data.py --dataset HeatedFlowEnsemble_eps3.0
 Common options:
 
 ```bash
-python prepare_data.py --dataset HeatedFlowEnsemble_eps1.0 --coupling via_graph
-python prepare_data.py --dataset HeatedFlow3D_eps3.0 --spatial-x 0 127 --spatial-y 0 255
+python prepare_data.py --dataset HeatedFlowEnsemble_eps1.0 --spatial-x 0 127 --spatial-y 0 255
 ```
 
 On Windows you can also use `run_prepare_data.ps1` or `run_prepare_data.bat` from the `metro_viz` folder.
