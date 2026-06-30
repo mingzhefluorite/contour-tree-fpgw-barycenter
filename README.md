@@ -60,7 +60,7 @@ python prepare_data.py --dataset HeatedFlowEnsemble_eps3.0
 Common options:
 
 ```bash
-python prepare_data.py --dataset HeatedFlowEnsemble_eps1.0 --spatial-x 0 127 --spatial-y 0 255
+python prepare_data.py --dataset HeatedFlowEnsemble_eps3.0 --spatial-x 0 127 --spatial-y 0 255
 ```
 
 On Windows you can also use `run_prepare_data.ps1` or `run_prepare_data.bat` from the `metro_viz` folder.
