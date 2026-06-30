@@ -1,0 +1,38 @@
+{
+  "dataset_name": "VortexStreet_eps1.0",
+  "n_inputs": 10,
+  "N_center": 60,
+  "alpha_fgw": 0.01639344262295082,
+  "lambda_penalty": 0.4,
+  "Lambda_list": [
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "relation_kind": "shortestpath",
+  "attribute_mode": "full",
+  "idx_list": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "unique_types": [
+    0,
+    1,
+    2
+  ]
+}

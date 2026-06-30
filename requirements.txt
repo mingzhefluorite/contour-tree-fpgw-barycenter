@@ -1,0 +1,24 @@
+# Uncertainty Visualization for Approximated Barycenter of Contour Trees
+# Based on Partial Optimal Transport — core Python dependencies (pip).
+# Use Python 3.10+ (3.11 recommended).
+
+numpy>=1.24,<3
+scipy>=1.10
+matplotlib>=3.7
+networkx>=3.0
+scikit-learn>=1.2
+POT>=0.9.0
+numba>=0.58
+pandas>=2.0
+pillow>=9.0
+imageio>=2.31
+h5py>=3.9
+tqdm>=4.65
+joblib>=1.2
+seaborn>=0.12
+
+# Notebooks
+jupyter>=1.0
+ipykernel>=6.0
+notebook>=6.5
+jupyterlab>=4.0

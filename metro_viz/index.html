@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uncertainty Visualization – Contour Tree Barycenter</title>
+  <link rel="stylesheet" href="style.css?v=18">
+</head>
+<body>
+
+<div id="app">
+  <div id="map-container">
+    <div id="dataset-bar">
+      <label for="dataset-name-select">Dataset</label>
+      <select id="dataset-name-select" title="Base dataset name"></select>
+      <label for="dataset-eps-select" class="eps-label" title="Persistence simplification">ε</label>
+      <select id="dataset-eps-select" title="Simplification level (eps)"></select>
+      <label for="dataset-balance-select" class="eps-label" title="Probability mass setting">Mass</label>
+      <select id="dataset-balance-select" title="Balanced or unbalanced distribution"></select>
+      <p id="input-tree-hint" class="input-tree-hint" aria-live="polite"></p>
+    </div>
+    <div id="map-split">
+      <div id="bary-panel">
+        <svg id="metro-svg"></svg>
+        <div id="bary-std-colorbar" class="bary-std-colorbar bary-std-colorbar-hidden" aria-hidden="true">
+          <div class="bary-std-colorbar-head" title="Standard deviation of function values at matched critical points. Uses only inputs selected in the legend; max is rescaled to the palette top.">
+            <div id="bary-std-colorbar-title" class="bary-std-colorbar-title">σ(function values of matched CPs)</div>
+            <div id="bary-std-colorbar-subtitle" class="bary-std-colorbar-subtitle">Across selected inputs</div>
+          </div>
+          <div class="bary-std-colorbar-max-row">
+            <span class="bary-std-colorbar-mark">max</span>
+            <span id="bary-std-colorbar-max" class="bary-std-colorbar-num"></span>
+          </div>
+          <div class="bary-std-colorbar-bar">
+            <div id="bary-std-colorbar-ramp" class="bary-std-colorbar-ramp" role="img" aria-label="Color scale: sigma of function values at matched critical points, across selected inputs; maximum on the scale is the largest sigma in view"></div>
+          </div>
+          <div class="bary-std-colorbar-min-row">
+            <span class="bary-std-colorbar-mark">min</span>
+            <span id="bary-std-colorbar-min" class="bary-std-colorbar-num">0</span>
+          </div>
+        </div>
+      </div>
+      <aside id="input-tree-panel" class="input-tree-panel" aria-hidden="true">
+        <div id="input-tree-resize-handle" class="input-tree-resize-handle" role="separator"
+          aria-orientation="vertical" aria-label="Drag to resize input tree panel" title="Drag to resize; double-click to reset"></div>
+        <div id="input-tree-header" class="input-tree-header">Input tree</div>
+        <svg id="input-tree-svg"></svg>
+        <div id="input-tree-message" class="input-tree-message"></div>
+      </aside>
+    </div>
+    <div id="node-panel" class="collapsed">
+      <div id="node-panel-header">
+        <span>Node Details</span>
+        <button id="node-panel-close" title="Close">×</button>
+      </div>
+      <div id="node-panel-body">
+        <div class="node-panel-empty">Click a station to inspect details.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="legend-panel">
+    <div id="legend-header">
+      <h3>Lines</h3>
+      <span id="legend-toggle">&#x25B6;</span>
+    </div>
+    <div id="legend-body"></div>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="metro.js?v=48"></script>
+</body>
+</html>

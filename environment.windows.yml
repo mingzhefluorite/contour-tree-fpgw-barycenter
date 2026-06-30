@@ -1,0 +1,32 @@
+# Conda environment for:
+# Uncertainty Visualization for Approximated Barycenter of Contour Trees
+# Based on Partial Optimal Transport (Windows-friendly).
+#
+# Create: conda env create -f environment.windows.yml
+# Update: conda env update -f environment.windows.yml --prune
+name: contour-tree-barycenter
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - scikit-image
+  - networkx
+  - pot
+  - h5py
+  - numba
+  - pillow
+  - imageio
+  - joblib
+  - plotly
+  - tqdm
+  - jupyterlab
+  - notebook
+  - ipykernel
